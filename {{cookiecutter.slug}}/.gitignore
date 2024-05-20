@@ -1,0 +1,8 @@
+*.png
+*.pdf
+venv
+.stepup
+.envrc
+dmp.*
+dmp_template.md
+__pycache__

@@ -1,0 +1,48 @@
+html {
+  line-height: 1.3;
+  font-family: IBM Plex Sans, Georgia, serif;
+  font-size: 10pt;
+}
+h1, h2 {
+  margin-top: 0.7cm;
+  border-bottom: 1pt solid #DDDDDD;
+}
+h3, h4, p {
+  margin-top: 0.5cm;
+  margin-left: 0.5cm;
+}
+ul, ol {
+  margin-left: 0.5cm;
+}
+ul ul, ul ol, ol ul, ol ol {
+  margin-left: 0.0cm;
+}
+li {
+  margin-left: 0.0cm;
+  margin-top: 2pt;
+  margin-bottom: 2pt;
+}
+li p {
+  margin-left: 0cm;
+}
+code {
+  font-family: IBM Plex Mono;
+  background-color: rgba(175, 184, 193, 0.2);
+  padding: 2pt 5pt 2pt 5pt;
+  border-radius: 6pt;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-collapse: collapse;
+}
+td, th {
+  border: 1pt solid #BBBBBB;
+  padding: 4pt;
+  font-size: 10pt;
+}
+@page {
+    size: A4;
+    margin: 1.5cm 1.5cm 1.5cm 1.5cm;
+}
