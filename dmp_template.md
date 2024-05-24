@@ -109,22 +109,8 @@ Two categories of new data will be created or reused:
     The volume of data in a single publication depends strongly on the amount of post-processed data included in the Publication source.
     It can vary from a few MB to a few GB.
 
-The use of Jupyter notebooks is strongly discouraged and only allowed for exploratory work,
-because:
-
-- Changes to Jupyter notebooks are not easily visualized with textual diffs.
-- Related to the previous point:
-  Collaboration in Jupyter notebooks via version control is problematic.
-  Merging different contributions to notebooks easily leads to invalid PYNB files.
-- You may execute code cells in notebooks in arbitrary order, which may lead to wrong results.
-- You cannot easily import Jupyter notebooks into other notebooks,
-  making them non-modular and monolithic.
-  The only way to reuse code from one notebook in another is to copy and paste fragments.
-
-Before storing and sharing,
-all code in Jupyter notebooks must be converted to Python scripts,
-and organized into a reproducible workflow,
-such that the notebooks can be safely deleted.
+General recommendations for file formats and related good practices can be found in the
+[StepUp RepRep documentation](https://reproducible-reporting.github.io/stepup-reprep/advanced_topics/good_practices/).
 
 
 ### How will the data be collected, created or reused?
