@@ -13,7 +13,7 @@ with open("fields.yaml") as fh:
 version = fields["dmp_template_version"]
 url = (
     "https://raw.githubusercontent.com/reproducible-reporting/dmp-template/"
-    f"v{version}/dmp_template.md"
+    f"{version}/dmp_template.md"
 )
 step(f"wget --no-clobber --quiet {url}", out="dmp_template.md")
 

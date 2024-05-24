@@ -8,7 +8,7 @@ css: style.css
 ## 1. Preamble
 
 This data management plan is derived from the [DMP template for StepUp-based projects](https://github.com/reproducible-reporting/dmp-template/)
-version {{ dmp_template_version }},
+version `{{ dmp_template_version }}`,
 which is based on the Generic DMP+ template from [DMP Online](https://dmponline.be).
 
 The first version of this document was created on 20 May 2024.
