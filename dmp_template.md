@@ -86,14 +86,14 @@ Two categories of new data will be created or reused:
 
      The file formats are chosen to facilitate data re-use:
 
-     - All formats widely used and can be read, written and processed by open source software.
+     - All formats are widely used and can be read, written and processed by open source software.
      - Text-based formats are used as much as possible.
      - Python source code will be written and combined with existing open source software
-       to perform all computtions.
+       to perform all computations.
        Python is one of the most popular and open source programming languages,
        and it runs on practically any computer.
 
-     The size of these datasets depends on the details of each work packages.
+     The size of these datasets depends on the details of each work package.
      They can vary from a few GB to a few TB.
 
 2. Publication source materials
@@ -267,14 +267,14 @@ through compilation, post-processing scripts or simulation software,
 are stored locally or on high-performance clusters.
 If the datasets are too large in volume or too expensive to recompute locally,
 they are stored on an SSH server to which all researchers on the project have access.
-For security reasons, key-based authentication is used with sufficiently long key paris.
+For security reasons, key-based authentication is used with sufficiently long key pairs.
 
 Periodic snapshots ([BTRFS](https://btrfs.readthedocs.io/))
 and periodic remote backups ([Borg](https://www.borgbackup.org/))
 are taken to protect against data loss due to hardware failures or human errors.
 These tools have standard techniques for data recovery in the event of an incident.
 
-When a project deliverable is completed, the corresponding data or archived for long-term storage.
+When a project deliverable is completed, the corresponding data is archived for long-term storage.
 For publications, StepUp RepRep provides
 [an archival protocol](https://reproducible-reporting.github.io/stepup-reprep/advanced_topics/archive_git/),
 which can be followed.
@@ -389,7 +389,7 @@ Data will be made available through public data repositories (see above) upon co
 These repositories support rich metadata to make the data discoverable through built-in search functions or popular search engines.
 They also provide DOIs for uploaded datasets.
 
-Live datasets are only be shared among researchers working on the project
+Live datasets are only shared among researchers working on the project
 or collaborators involved in the project using the means described above.
 
 
