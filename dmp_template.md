@@ -259,6 +259,7 @@ Periodic snapshots ([BTRFS](https://btrfs.readthedocs.io/))
 and periodic remote backups ([Borg](https://www.borgbackup.org/))
 are taken to protect against data loss due to hardware failures or human errors.
 These tools have standard techniques for data recovery in the event of an incident.
+[Our backup script](https://github.com/reproducible-reporting/backup-script) is made publicly available.
 
 When a project deliverable is completed, the corresponding data is archived for long-term storage.
 For publications, StepUp RepRep provides
