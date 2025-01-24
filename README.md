@@ -79,7 +79,7 @@ It is assumed that you are familiar with these tools and know how to use them.
 5. Compile the `dmp.pdf` file:
 
     ```bash
-    stepup -n
+    stepup
     ```
 
 
