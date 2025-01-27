@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 from yaml import safe_load
 from stepup.core.api import static, step, amend
-from stepup.reprep.api import render, convert_markdown, convert_weasyprint
+from stepup.reprep.api import render_jinja, convert_markdown, convert_weasyprint
 
 # Get the version number from the fields file.
 static("fields.yaml")
@@ -19,6 +19,6 @@ step(f"wget --no-clobber --quiet {url}", out="dmp_template.md")
 
 # Render the PDF.
 static("fields.py", "style.css")
-render("dmp_template.md", ["fields.py"], "dmp.md")
+render_jinja("dmp_template.md", ["fields.py"], "dmp.md")
 convert_markdown("dmp.md")
 convert_weasyprint("dmp.html")
