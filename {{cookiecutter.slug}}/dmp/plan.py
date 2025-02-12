@@ -19,6 +19,6 @@ step(f"wget --no-clobber --quiet {url}", out="dmp_template.md")
 
 # Render the PDF.
 static("fields.py", "style.css")
-render_jinja("dmp_template.md", ["fields.py"], "dmp.md")
+render_jinja("dmp_template.md", "fields.py", "dmp.md")
 convert_markdown("dmp.md")
 convert_weasyprint("dmp.html")
