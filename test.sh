@@ -3,16 +3,15 @@ set -e
 
 # Test whether the instructions in the README.md file do not generate errors.
 REPO=${PWD}
-TMP_DIR="$(mktemp -d)"
+WORKDIR="../nobackup/dmp-test"
 
-if [ -d "${TMP_DIR}" ]; then
-    trap "rm -rf -- '$TMP_DIR'" EXIT
-else
-    echo "Failed to create a temporary directory." >&2
-    exit 1
+if [ -d "${WORKDIR}" ]; then
+    echo "Test output already exists." >&2
+    rm -rvf "${WORKDIR}"
 fi
+mkdir -p "${WORKDIR}"
 
-cd "${TMP_DIR}"
+cd "${WORKDIR}"
 echo > config.yaml << EOF
 ---
 slug: test
@@ -30,6 +29,6 @@ git commit -a -m "Initial commit"
 ./setup-venv-pip.sh
 source .envrc
 pre-commit install
-stepup
+(cd dmp; stepup)
 
 git commit -a -m "Second commit"

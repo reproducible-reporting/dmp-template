@@ -19,7 +19,7 @@ The history of changes to this repository are listed in [CHANGELOG.md](CHANGELOG
 Version numbers are of the form `{MAJOR}.{MINOR}`:
 
 - An increase in the major version number implies a change
-  in the fields available in [`fields.yaml`]({{cookiecutter.slug}}/fields.yaml).
+  in the fields available in [`fields.yaml`]({{cookiecutter.slug}}/dmp/fields.yaml).
 - The minor version number is increased after significant changes
   to the template (without changing the available fields or their meaning).
 
@@ -79,6 +79,7 @@ It is assumed that you are familiar with these tools and know how to use them.
 5. Compile the `dmp.pdf` file:
 
     ```bash
+    cd dmp
     stepup
     ```
 

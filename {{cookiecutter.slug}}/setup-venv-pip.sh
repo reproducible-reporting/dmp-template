@@ -17,7 +17,14 @@ EOL
 
 # Activate
 source .envrc
-python3 -m pip install -U pip
+# From now on, regular "python" can be used instead of ${PYTHON3}.
+python -m pip install -U pip
 
 # Install requirements, possibly updated after repository initialization
-python3 -m pip install -r requirements.txt
+python -m pip install -r requirements.txt
+
+if [[ -n "${DMP_TEMPLATE_DEBUG}" ]]; then
+    # Install local development versions of StepUp Core and StepUp RePrep
+    echo "Install the development version of the DMP template"
+    python -m pip install -e ${DMP_TEMPLATE_DEBUG}/stepup-core -e ${DMP_TEMPLATE_DEBUG}/stepup-reprep
+fi
