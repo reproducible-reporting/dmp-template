@@ -20,7 +20,7 @@ def run(out):
     cp = subprocess.run(args, capture_output=True, stdin=subprocess.DEVNULL, check=False)
     generated = {"fields_current": cp.stdout.decode().strip()}
 
-    # Get info from the current template version.
+    # Get info from the current and latest template version.
     with open("template.yaml") as fh:
         template = safe_load(fh)
     for label, version in ("current", template["version"]), ("latest", "main"):
