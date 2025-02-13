@@ -1,6 +1,8 @@
-# The Git repository "slug"
-owner: reproducible-reporting
-slug: {{ cookiecutter.slug }}
+## 1. Preamble
+
+# The GitHub repository "owner" and "repository" of this DMP.
+github_owner: reproducible-reporting
+github_repository: {{ cookiecutter.slug }}
 
 ## 2. Project information
 

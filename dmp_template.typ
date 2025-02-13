@@ -21,16 +21,16 @@
 == 1. Preamble
 
 This data management plan is derived from the
-#link("https://github.com/reproducible-reporting/dmp-template/")[DMP template for StepUp-based projects]
-version #template.version,
+#link("https://github.com/" + template.github_owner + "/" + template.github_repository + "/")[DMP template for StepUp-based projects]
+version #template.version (#generated.template_latest),
 which is based on the Generic DMP+ template from
 #link("https://dmponline.be")[DMP Online].
 The first version of this template was created on 20 May 2024
-and it was last updated on 14 February 2025.
+and it was last updated on #generated.template_latest (at the time of writing).
 
-This document dates from #generated.last_updated.
-The source material and a PDF of the latest version of this document can be found at:
-#link("https://github.com/" + fields.owner + "/" + fields.slug + "/").
+This document dates from #generated.fields_current.
+The source material of the latest version of this document can be found at:
+#link("https://github.com/" + fields.github_owner + "/" + fields.github_repository + "/").
 
 == 2. Project information
 

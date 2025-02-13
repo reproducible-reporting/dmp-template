@@ -38,8 +38,9 @@ pre-commit install
 # Overwrite the template.yaml file for testing
 cd dmp
 cat > template.yaml << EOF
-version: '[debug]'
-base_url: '[nourl]'
+version: v2.0
+github_owner: reproducible-reporting
+github_repository: dmp-template
 local:
  - ../../${REPO}/
  - ../../${REPO}/dmp_template.typ
