@@ -7,7 +7,7 @@ github_repository: {{ cookiecutter.slug }}
 ## 2. Project information
 
 project_type: TODO
-
+project_slug: {{ cookiecutter.short_name }}
 project_title: {{ cookiecutter.long_name }}
 
 # Official project start date in YYYY-MM-DD format, between single quotes.
