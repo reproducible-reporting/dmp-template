@@ -22,7 +22,7 @@
 
 This data management plan is derived from the
 #link("https://github.com/" + template.github_owner + "/" + template.github_repository + "/")[DMP template for StepUp-based projects]
-version #template.version (#generated.template_latest),
+version #template.version (#generated.template_current),
 which is based on the Generic DMP+ template from
 #link("https://dmponline.be")[DMP Online].
 The first version of this template was created on 20 May 2024
