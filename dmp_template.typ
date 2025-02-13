@@ -16,7 +16,7 @@
 #let template = yaml("template.yaml")
 #let generated = yaml("generated.yaml")
 
-= Data Management Plan for #fields.project_type: #fields.project_title"
+= Data Management Plan for "#fields.project_type: #fields.project_title"
 
 == 1. Preamble
 
