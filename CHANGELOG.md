@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0] - 2025-02-13
+
+### Changed
+
+- Switched to Typst for PDF build.
+- Automatically fill in date when the DMP is built.
+- Moved template-related fields from `fields.yaml` to `template.yaml` to facilitate testing.
+- New or changed fields in `template.yaml`:
+    - Added `owener` for the GitHub account hosting the DMP.
+    - Replaced `principal_investigators` and `other_researchers`
+      with `persons` in `template.yaml`.
+- Minor revisions to the template.
+
 ## [1.0] - 2024-05-20
 
 ### Added

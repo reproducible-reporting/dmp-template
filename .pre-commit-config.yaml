@@ -1,6 +1,6 @@
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: "v4.6.0"
+  rev: "v5.0.0"
   hooks:
     - id: check-added-large-files
     - id: check-case-conflict
@@ -15,3 +15,15 @@ repos:
   rev: v1.5.5
   hooks:
     - id: remove-crlf
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.8.4
+  hooks:
+    - id: ruff-format
+    - id: ruff
+      args: ["--fix", "--show-fixes"]
+- repo: https://github.com/DavidAnson/markdownlint-cli2
+  rev: v0.17.2
+  hooks:
+  - id: markdownlint-cli2
+    exclude: '^test'
+    require_serial: true

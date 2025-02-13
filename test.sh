@@ -1,34 +1,52 @@
 #!/usr/bin/env bash
+# Test whether the instructions in the README.md file do not generate errors.
 set -e
 
-# Test whether the instructions in the README.md file do not generate errors.
-REPO=${PWD}
+# Make a working directory
+REPO="../../$(basename ${PWD})"
 WORKDIR="../nobackup/dmp-test"
 
+# Run the cookiecutter template
 if [ -d "${WORKDIR}" ]; then
-    echo "Test output already exists." >&2
-    rm -rvf "${WORKDIR}"
-fi
-mkdir -p "${WORKDIR}"
-
-cd "${WORKDIR}"
-echo > config.yaml << EOF
+  cd "${WORKDIR}"
+  cookiecutter ${REPO} --replay --overwrite-if-exists
+else
+  mkdir -p "${WORKDIR}"
+  cd "${WORKDIR}"
+  echo > config.yaml << EOF
 ---
 slug: test
 short_name: test
 long_name: Test DMP
 EOF
 
-cookiecutter ${REPO} --config-file config.yaml --no-input
+  cookiecutter ${REPO} --config-file config.yaml --no-input
+fi
 
+# Run the instructions in the README.md file
 cd dmp-project-short
+rm -rf .git
 git init
 git add .
 git commit -a -m "Initial commit"
 
+# Set up the virtual environment.
 ./setup-venv-pip.sh
 source .envrc
 pre-commit install
-(cd dmp; stepup)
 
+# Overwrite the template.yaml file for testing
+cd dmp
+cat > template.yaml << EOF
+version: '[debug]'
+base_url: '[nourl]'
+local:
+ - ../../${REPO}/
+ - ../../${REPO}/dmp_template.typ
+EOF
+
+# Build the DMP
+stepup
+
+# Try a commit
 git commit -a -m "Second commit"

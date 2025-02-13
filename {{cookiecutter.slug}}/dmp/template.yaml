@@ -1,0 +1,8 @@
+# The version of the template, between single quotes
+version: 'v2.0'
+base_url: https://raw.githubusercontent.com/reproducible-reporting/dmp-template
+# For template authoring and testing:
+# if uncommented, a local copy is used instead of downloading.
+# local:
+#  - ../../template/
+#  - ../../template/dmp_template.typ

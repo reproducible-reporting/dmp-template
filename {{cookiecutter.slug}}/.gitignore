@@ -4,5 +4,6 @@ venv
 .stepup
 .envrc
 dmp.*
-dmp_template.md
+dmp_template.typ
 __pycache__
+generated.yaml

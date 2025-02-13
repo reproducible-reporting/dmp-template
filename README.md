@@ -1,9 +1,8 @@
+# Data Management Plan for StepUp-based Projects
+
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](http://creativecommons.org/licenses/by-nc-sa/4.0/).
-
-
-# Data Management Plan for StepUp-based Projects
 
 This repository aims to provide a data management plan for research projects
 where all source data (scripts, reports, etc.) are version-controlled with Git.
@@ -12,26 +11,26 @@ but this is not a strict requirement.
 You can also use StepUp for non-publication repositories,
 e.g. to process datasets of or to build computational workflows.
 
-
 ## Version history
 
 The history of changes to this repository are listed in [CHANGELOG.md](CHANGELOG.md).
 Version numbers are of the form `{MAJOR}.{MINOR}`:
 
 - An increase in the major version number implies a change
-  in the fields available in [`fields.yaml`]({{cookiecutter.slug}}/dmp/fields.yaml).
+  in the fields available in [`fields.yaml`]({{cookiecutter.slug}}/dmp/fields.yaml)
+  or a complete chane of how the template works.
 - The minor version number is increased after significant changes
   to the template (without changing the available fields or their meaning).
 
 Versions are tagged commits in the Git history.
 Author contributions can also be found in the Git history.
 
-
-## Creating a DMP for a new project.
+## Creating a DMP for a new project
 
 You must have
 [Python](https://www.python.org/) 3,
 [Git](https://git-scm.com/),
+[Typst](https://github.com/typst/typst) 0.12,
 [direnv](https://direnv.net/)
 and the [Cookiecutter](https://www.cookiecutter.io/)
 installed on your computer.
@@ -82,7 +81,6 @@ It is assumed that you are familiar with these tools and know how to use them.
     cd dmp
     stepup
     ```
-
 
 ## Contributions are welcome
 

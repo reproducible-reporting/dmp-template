@@ -1,20 +1,18 @@
-# The version of the template, between single quotes
-dmp_template_version: 'v1.1'
-
 # The Git repository "slug"
-slug: '{{ cookiecutter.slug }}'
+owner: reproducible-reporting
+slug: {{ cookiecutter.slug }}
 
 ## 2. Project information
 
 project_type: TODO
 
-project_title: '{{ cookiecutter.long_name }}'
+project_title: {{ cookiecutter.long_name }}
 
-# Official project start date in YYYY-0M-0D format, between single quotes.
-project_start: 'YYYY-0M-0D'
+# Official project start date in YYYY-MM-DD format, between single quotes.
+project_start: 'YYYY-MM-0D'
 
-# Official project end date in YYYY-0M-0D format, between single quotes.
-project_end: 'YYYY-0M-0D'
+# Official project end date in YYYY-MM-DD format, between single quotes.
+project_end: 'YYYY-MM-0D'
 
 # Abstract from the project application
 project_abstract: |
@@ -27,16 +25,19 @@ grant_url: |
 
 ## 3. Relevant Persons and Services
 
-principal_investigators: |
-  - TODO
-
-  - TODO
-
-other_researchers: |
-  - TODO
-
-access_long_term: |
-  - TODO
+persons:
+  - name: Full name 1
+    role: PI/Co-PI/PhD student/Postdoc/Researcher/...
+    email: foo@bar.egg
+    orcid: 0000-0000-0000-0000
+    live: yes
+    archive: no
+  - name: Full name 2
+    role: PI/Co-PI/PhD student/Postdoc/Researcher/...
+    email: foo@bar.egg
+    orcid: 0000-0000-0000-0000
+    live: no
+    archive: yes
 
 university_storage: |
   - TODO

@@ -1,0 +1,7 @@
+{
+  "config": {
+    "MD013": false,
+    "MD007": { "indent": 4 },
+    "MD046": false
+  }
+}
