@@ -30,7 +30,7 @@ Author contributions can also be found in the Git history.
 You must have
 [Python](https://www.python.org/) 3,
 [Git](https://git-scm.com/),
-[Typst](https://github.com/typst/typst) 0.12,
+[Typst](https://github.com/typst/typst) 0.13,
 [direnv](https://direnv.net/)
 and the [Cookiecutter](https://www.cookiecutter.io/)
 installed on your computer.
