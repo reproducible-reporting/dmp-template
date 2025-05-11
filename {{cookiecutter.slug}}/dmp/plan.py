@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from stepup.core.api import amend, copy, script, static, step
+from stepup.core.api import amend, copy, runsh, script, static
 from stepup.reprep.api import compile_typst
 from yaml import safe_load
 
@@ -20,7 +20,7 @@ else:
     owner = template["github_owner"]
     repository = template["github_repository"]
     url = f"https://raw.githubusercontent.com/{owner}/{repository}/{version}/dmp_template.typ"
-    step(f"wget --no-clobber --quiet {url} -O dmp.typ", out="dmp.typ")
+    runsh(f"wget --no-clobber --quiet {url} -O dmp.typ", out="dmp.typ")
 
 # Write the data of the latest Git commit to a yaml file.
 script("generate.py")
