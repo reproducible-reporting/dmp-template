@@ -30,7 +30,7 @@ cd {{ cookiecutter.slug }}
 direnv allow
 pre-commit install
 cd dmp
-stepup
+stepup boot
 ```
 
 This is a living document of which the latest Git commit contains the most up-to-date information.

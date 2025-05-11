@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][]
 
+### Changed
+
+- Update to StepUp 3
+- Refer to BtrUp for backups
+
 ### Fixed
 
 - Fixed minor mistake (current template date) in the template.

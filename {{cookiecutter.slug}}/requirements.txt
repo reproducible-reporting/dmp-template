@@ -1,4 +1,4 @@
-stepup==2.1.4
-stepup-reprep==2.3.2
+stepup==3.0.0
+stepup-reprep==3.0.0
 pyyaml
 pre-commit

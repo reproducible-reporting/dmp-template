@@ -18,7 +18,7 @@ Version numbers are of the form `{MAJOR}.{MINOR}`:
 
 - An increase in the major version number implies a change
   in the fields available in [`fields.yaml`]({{cookiecutter.slug}}/dmp/fields.yaml)
-  or a complete chane of how the template works.
+  or a complete change of how the template works.
 - The minor version number is increased after significant changes
   to the template (without changing the available fields or their meaning).
 
@@ -79,7 +79,7 @@ It is assumed that you are familiar with these tools and know how to use them.
 
     ```bash
     cd dmp
-    stepup
+    stepup boot
     ```
 
 ## Contributions are welcome
