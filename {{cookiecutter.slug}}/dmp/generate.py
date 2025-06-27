@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """Generate some fields to be used as input in the template."""
 
 import datetime
