@@ -57,6 +57,12 @@ It is assumed that you are familiar with these tools and know how to use them.
      A short name for the project, not too many characters, no spaces.
    - `long_name`:
      The official name of the project, e.g. from the grant application.
+   - `full_name`:
+     Your full name, used for copyright and authorship information.
+   - `work_email`:
+     Your work email address, used for copyright and authorship information.
+   - `year`:
+     The year of your first DMP version, used for copyright information.
 
 1. Initialize a Git repository:
 
