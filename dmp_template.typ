@@ -124,6 +124,8 @@ Two categories of new data will be created or reused:
     to perform all computations.
     Python is one of the most popular and open source programming languages,
     and it runs on practically any computer.
+  - Workflows to facilitate a complete reproduction of the data generation, simulation and/or post-processing steps
+    (#link("https://reproducible-reporting.github.io/stepup-core/")[StepUp] `plan.py` scripts)
 
   The size of these datasets depends on the details of each work package.
   They can vary from a few GB to a few TB.
@@ -186,11 +188,10 @@ To ensure a smooth integration with the Git repository,
 non-Git data is shared as follows:
 
 - It is stored on an SSH server that can be accessed by all participating researchers.
-- The remote dataset can be mounted as a local subdirectory in the Git repository using SFTP.
+- The remote dataset can be synchronized with a local subdirectory in the Git repository using SFTP.
 - The Git repository contains all the tools to integrate the external dataset,
-  such as scripts to mount and unmount the subdirectory.
-- Any information or data needed to reconstruct the external data from scratch
-  is included in the Git repository.
+  such as scripts to synchronize the data (upload and download).
+- Any information or data needed to recreate the external data is included in the Git repository.
 
 == 5. Data Documentation and Metadata
 
@@ -205,13 +206,13 @@ For Python source code, we follow best practices for documentation:
 
 - API documentation in docstrings.
 - Source code comments to explain the intent of each piece of code.
-- Where relevant, end-user documentation and/or tutorials written with
+- Where relevant, end-user documentation and/or tutorials written with tools like
   #link("https://www.mkdocs.org/")[MkDocs] or #link("https://www.sphinx-doc.org/")[Sphinx].
 
-Numerical datasets are accompanied by Markdown documents:
+Numerical datasets are accompanied by Markdown or Typst documents:
 
 - To describe the meaning of columns in CSV files in plain English.
-- To describe the meaning of arrays in NPY, NPZ, or ZAR files in plain English.
+- To describe the meaning of arrays in NPY, NPZ, ZIP or ZARR files in plain English.
 
 For all data, we also include the following per Git repository:
 

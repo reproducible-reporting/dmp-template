@@ -18,9 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update to StepUp 3
-- Refer to BtrUp for backups
-- REUSE for licensing information
+- Update to StepUp 3.
+- Refer to BtrUp for backups.
+- Use REUSE.software for licensing information.
+- Replace "mounting" of remote datasets by "synchronization", as this is more efficient and robust.
+- Include workflows in the dataset category.
+- Minor refinements to the template.
 
 ### Fixed
 
