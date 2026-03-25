@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: © 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
+# SPDX-FileCopyrightText: © {{ cookiecutter.year }} {{ cookiecutter.full_name }} <{{ cookiecutter.work_email }}>
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+
 ## 1. Preamble
 
 # The GitHub repository "owner" and "repository" of this DMP.

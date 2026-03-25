@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: © 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
+// SPDX-License-Identifier: CC-BY-NC-SA-4.0
+
+
 // Template formatting
 #set page(
   footer: context [

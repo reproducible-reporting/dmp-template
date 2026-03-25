@@ -1,3 +1,8 @@
+<!--
+SPDX-FileCopyrightText: © 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
+SPDX-License-Identifier: CC-BY-NC-SA-4.0
+-->
+
 # Data Management Plan for StepUp-based Projects
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -17,7 +22,7 @@ The history of changes to this repository are listed in [CHANGELOG.md](CHANGELOG
 Version numbers are of the form `{MAJOR}.{MINOR}`:
 
 - An increase in the major version number implies a change
-  in the fields available in [`fields.yaml`]({{cookiecutter.slug}}/dmp/fields.yaml)
+  in the fields available in [`fields.yaml`](%7B%7Bcookiecutter.slug%7D%7D/dmp/fields.yaml)
   or a complete change of how the template works.
 - The minor version number is increased after significant changes
   to the template (without changing the available fields or their meaning).
@@ -38,49 +43,49 @@ It is assumed that you are familiar with these tools and know how to use them.
 
 1. Instantiate a new DMP from the template:
 
-    ```bash
-    cookiecutter https://github.com/reproducible-reporting/dmp-template
-    ```
+   ```bash
+   cookiecutter https://github.com/reproducible-reporting/dmp-template
+   ```
 
-    Follow the instructions on the screen, which will ask you to fill in some fields:
+   Follow the instructions on the screen, which will ask you to fill in some fields:
 
-    - `slug`:
-      This is a short name for the directory containing the sources and compiled outputs.
-      Use only lower case letters, numbers and hyphens, no spaces.
-      It is recommended to start the slug with `dmp-`.
-    - `short_name`:
-      A short name for the project, not too many characters, no spaces.
-    - `long_name`:
-      The official name of the project, e.g. from the grant application.
+   - `slug`:
+     This is a short name for the directory containing the sources and compiled outputs.
+     Use only lower case letters, numbers and hyphens, no spaces.
+     It is recommended to start the slug with `dmp-`.
+   - `short_name`:
+     A short name for the project, not too many characters, no spaces.
+   - `long_name`:
+     The official name of the project, e.g. from the grant application.
 
-2. Initialize a Git repository:
+1. Initialize a Git repository:
 
-    ```bash
-    cd `slug`
-    git init
-    git add .
-    git commit -a -m "Initial commit"
-    ```
+   ```bash
+   cd `slug`
+   git init
+   git add .
+   git commit -a -m "Initial commit"
+   ```
 
-3. Create a software environment
+1. Create a software environment
 
-    ```bash
-    ./setup-venv-pip.sh
-    direnv allow
-    ```
+   ```bash
+   ./setup-venv-pip.sh
+   direnv allow
+   ```
 
-4. Enable pre-commit:
+1. Enable pre-commit:
 
-    ```bash
-    pre-commit install
-    ```
+   ```bash
+   pre-commit install
+   ```
 
-5. Compile the `dmp.pdf` file:
+1. Compile the `dmp.pdf` file:
 
-    ```bash
-    cd dmp
-    stepup boot
-    ```
+   ```bash
+   cd dmp
+   stepup boot
+   ```
 
 ## Contributions are welcome
 

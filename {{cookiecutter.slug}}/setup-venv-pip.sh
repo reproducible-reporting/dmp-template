@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# SPDX-FileCopyrightText: © 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+
 set -e
 
 # This script assumes you have a running and somewhat modern Python environment.

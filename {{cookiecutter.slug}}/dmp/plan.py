@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: © 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+
 from stepup.core.api import amend, copy, runsh, script, static
 from stepup.reprep.api import compile_typst
 from yaml import safe_load

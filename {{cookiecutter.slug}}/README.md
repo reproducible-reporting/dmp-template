@@ -1,3 +1,8 @@
+<!--
+SPDX-FileCopyrightText: © 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
+SPDX-License-Identifier: CC-BY-NC-SA-4.0
+-->
+
 # Data Management Plan "{{ cookiecutter.short_name }}"
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)

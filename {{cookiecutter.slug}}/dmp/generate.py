@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: © 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+
 """Generate some fields to be used as input in the template."""
 
 import datetime
@@ -23,6 +26,11 @@ def run(out):
     # Get info from the current and latest template version.
     with open("template.yaml") as fh:
         template = safe_load(fh)
+
+    # Get the SPDX header from the template.
+    with open("template.yaml") as fh:
+        spdx_header = "".join(line for line in fh if line.startswith("# SPDX-"))
+
     for label, version in ("current", template["version"]), ("latest", "main"):
         owner = template["github_owner"]
         repository = template["github_repository"]
@@ -34,6 +42,7 @@ def run(out):
 
     # Write YAML file.
     with open(out, "w") as fh:
+        fh.write(spdx_header)
         safe_dump(generated, fh)
 
 

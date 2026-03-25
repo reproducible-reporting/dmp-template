@@ -1,4 +1,7 @@
-stepup==3.0.6
-stepup-reprep==3.1.2
+# SPDX-FileCopyrightText: © 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+
+stepup==3.2.2
+stepup-reprep==3.1.9
 pyyaml
 pre-commit

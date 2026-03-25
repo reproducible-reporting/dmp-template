@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# SPDX-FileCopyrightText: © 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+
 # Test whether the instructions in the README.md file do not generate errors.
 set -e
 
@@ -18,6 +21,9 @@ else
 slug: test
 short_name: test
 long_name: Test DMP
+full_name: Test User
+work_email: test.user@example.org
+year: 2525
 EOF
 
   cookiecutter ${REPO} --config-file config.yaml --no-input
@@ -38,6 +44,8 @@ pre-commit install
 # Overwrite the template.yaml file for testing
 cd dmp
 cat > template.yaml << EOF
+# SPDX-FileCopyrightText: © 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
 version: v2.0
 github_owner: reproducible-reporting
 github_repository: dmp-template
