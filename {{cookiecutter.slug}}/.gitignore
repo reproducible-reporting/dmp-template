@@ -10,3 +10,4 @@ dmp.*
 dmp_template.typ
 __pycache__
 generated.yaml
+.DS_Store

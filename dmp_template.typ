@@ -11,7 +11,7 @@
       #h(1fr)
       Page #num of #tot
     ])
-  ]
+  ],
 )
 #show link: it => { text(fill: blue, it) }
 
@@ -25,7 +25,9 @@
 == 1. Preamble
 
 This data management plan is derived from the
-#link("https://github.com/" + template.github_owner + "/" + template.github_repository + "/")[DMP template for StepUp-based projects]
+#link(
+  "https://github.com/" + template.github_owner + "/" + template.github_repository + "/",
+)[DMP template for StepUp-based projects]
 version #template.version (#generated.template_current),
 which is based on the Generic DMP+ template from
 #link("https://dmponline.be")[DMP Online].
@@ -60,20 +62,16 @@ The following persons are involved in the project:
 #table(
   columns: (1fr, 1fr, 1fr, auto, auto),
   align: center,
-  table.header(
-    [*Name (email)*],
-    [*Role*],
-    [*ORCID*],
-    [*L*],
-    [*A*],
-  ),
-  ..for record in fields.persons {(
-    link("mailto:" + record.email, [#record.name]),
-    [#record.role],
-    if record.orcid != none {link("https://orcid.org/" + record.orcid, record.orcid)},
-    if record.live == "yes" [✔],
-    if record.archive == "yes" [✔],
-  )}
+  table.header([*Name (email)*], [*Role*], [*ORCID*], [*L*], [*A*]),
+  ..for record in fields.persons {
+    (
+      link("mailto:" + record.email, [#record.name]),
+      [#record.role],
+      if record.orcid != none { link("https://orcid.org/" + record.orcid, record.orcid) },
+      if record.live == "yes" [✔],
+      if record.archive == "yes" [✔],
+    )
+  },
 )
 
 - The column "L" indicates whether the person has access to the *live data*.
@@ -133,10 +131,10 @@ Two categories of new data will be created or reused:
 2. Publication source materials
 
   - Relevant publication data extracted from the post-processing steps of the raw datasets.
-  - LaTeX and/or Typst sources (manuscripts, supporting information, cover letters, reply letters, etc.)
+  - LaTeX and/or Typst sources (manuscripts, supporting information, cover letters, reply letters, etc.).
   - Python source code to perform additional analyses, generate figures (SVG, PDF) and tables (TEX, TYP, CSV) for inclusion in publications.
-  - Workflows to facilitate a complete reproduction of the manuscript from its sources.
-    (#link("https://reproducible-reporting.github.io/stepup-core/")[StepUp] `plan.py` scripts)
+  - Workflows to facilitate a complete reproduction of the manuscript from its sources
+    (#link("https://reproducible-reporting.github.io/stepup-core/")[StepUp] `plan.py` scripts).
 
   The file formats are selected to facilitate data reuse,
   using the same strategy as for raw data sets.
@@ -162,7 +160,7 @@ Relevant aspects:
 */
 
 All datasets contain manually curated source data to some extent,
-such as Python scripts, simulation input files and/or LaTeX documents.
+such as Python scripts, simulation input files and/or LaTeX/Typst documents.
 Therefore, each dataset (either for raw data or for publications)
 is contained in a Git repository to track the history of the source files
 and to share these source files with everyone involved in the project.
@@ -218,10 +216,10 @@ For all data, we also include the following per Git repository:
 
 - A `README.md` file written in Markdown with:
 
-    - An overview of the dataset, with links to the most important parts.
-    - Instructions on how to reproduce and reuse the data.
-    - The license under which the data is distributed.
-    - A description of how different versions of the data are managed.
+  - An overview of the dataset, with links to the most important parts.
+  - Instructions on how to reproduce and reuse the data.
+  - The license under which the data is distributed.
+  - A description of how different versions of the data are managed.
 
 - A `CHANGELOG.md` file, following the
   "#link("https://keepachangelog.com/")[Keep a Changelog]" format.
@@ -268,8 +266,7 @@ Relevant aspects:
   to encourage others to reuse our data.
 - The reusable Python source code will be made available as open source software,
   either as a package distributed on PyPI,
-  or by including scripts and utilities associated with datasets
-  deposited in appropriate online repositories.
+  or as scripts and utilities included with the datasets deposited in appropriate online repositories.
   (More details on data deposits are given below.)
 - The original authors retain the copyrights of the data they generate,
   unless these rights are transferred in an article publication agreement.
@@ -329,14 +326,14 @@ Relevant aspects:
 We aim to maximize the openness of the data produced in this work.
 The main risk is unintentional data loss, either by human error or technical problems.
 To reduce the risk of such data incidents,
-Git is used for version control and secure communication
-and authentication protocols are used to give write access only to the appropriate people.
+Git is used for version control and secure communication,
+and authentication protocols ensure that write access is granted only to the appropriate people.
 
 Good data security practices are followed,
 the details of which depend on where the data is stored:
 
 - GitHub has fine-grained access control options
-  and uses SSH or HHTPS protocols for encrypted communications.
+  and uses SSH or HTTPS protocols for encrypted communication.
 - University storage servers also have fine-grained access controls.
 - Data stored on high-performance clusters are accessed through the SSH protocol.
   The default Unix file permissions are strict to rule out unauthorized access.
@@ -384,23 +381,23 @@ Data will be preserved as follows:
   in two forms as documented in the
   #link("https://reproducible-reporting.github.io/stepup-reprep/advanced_topics/archive_git/")[StepUp RepRep Archiving Tutorial]:
 
-    - A #link("https://git-scm.com/docs/git-bundle")[Git bundle] of the full history of the source files.
-    - A ZIP file of the most recent version, including source files and all built output files
-      (PDF preprint of the publication, etc.)
+  - A #link("https://git-scm.com/docs/git-bundle")[Git bundle] of the full history of the source files.
+  - A ZIP file of the most recent version, including source files and all built output files
+    (PDF preprint of the publication, etc.).
 
 - *Reusable individual elements from the publications:*
 
-    - Individual figures and tables from publications are uploaded to FigShare.
-    - Data presented in figures and tables are also uploaded in reusable form on FigShare,
-      e.g. as documented CSV files.
-    - SVG source files of figures are also uploaded to FigShare when available.
+  - Individual figures and tables from publications are uploaded to FigShare.
+  - The data underlying these figures and tables are also uploaded in reusable form on FigShare,
+    e.g. as documented CSV files.
+  - SVG source files of figures are also uploaded to FigShare when available.
 
-    FigShare does not currently have a data lifetime limit.
+  FigShare does not currently impose a data-lifetime limit.
 
-    (The development of a convenient tool for uploading such data efficiently is foreseen in StepUp RepRep.)
+  (The development of a convenient tool for uploading such data efficiently is foreseen in StepUp RepRep.)
 
 - *Large raw datasets:*
-  will be stored on Zenodo, which currently has no limitation on the data lifetime.
+  These will be stored on Zenodo, which currently has no limitation on the data lifetime.
 
 All of the archives discussed above will be created after a deliverable has been completed.
 Therefore, these data will not change after publication and will not require additional curation.
@@ -461,12 +458,11 @@ which we will implement by using software tools to facilitate good practices fro
 By having everyone work with compatible tools,
 we constantly validate the adherence to our data management protocol.
 
-Data placed in public repositories will remain available after researchers change positions.
+Data placed in public repositories will remain accessible after researchers change positions.
 Only for data hosted on UGent project shares,
-a series of persons must be given access permissions
-to guarantee that the data remains available over a sufficiently long time:
+access must be granted to a set of designated people to ensure long-term availability:
 the researchers involved in the project
-and at least one other tenured staff member outside the project.
+and at least one tenured staff member outside the project.
 
 
 === Will you need additional resources to implement your DMP?
