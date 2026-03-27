@@ -14,11 +14,11 @@ where all source data (scripts, reports, etc.) are version-controlled with Git.
 The document emphasizes the use of StepUp for publication repositories,
 but this is not a strict requirement.
 You can also use StepUp for non-publication repositories,
-e.g. to process datasets of or to build computational workflows.
+e.g. to process datasets or to build computational workflows.
 
 ## Version history
 
-The history of changes to this repository are listed in [CHANGELOG.md](CHANGELOG.md).
+The history of changes to this repository is listed in [CHANGELOG.md](CHANGELOG.md).
 Version numbers are of the form `{MAJOR}.{MINOR}`:
 
 - An increase in the major version number implies a change

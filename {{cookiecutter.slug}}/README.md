@@ -15,13 +15,13 @@ This repository contains the version history of the data management plan (DMP) f
 
 The DMP is built from source with
 [StepUp RepRep](https://reproducible-reporting.github.io/stepup-reprep/)
-and is based on the template in GitHub repository
+and is based on the template in the GitHub repository
 [reproducible-reporting/dmp-template](https://github.com/reproducible-reporting/dmp-template).
 
 To rebuild and work on the data management plan, `dmp.pdf`, you must have
 [Python](https://www.python.org/) 3,
 [Git](https://git-scm.com/),
-[Typst](https://github.com/typst/typst) 0.12,
+[Typst](https://github.com/typst/typst) 0.13,
 and [direnv](https://direnv.net/)
 installed on your computer.
 It is assumed that you are familiar with these tools and know how to use them.
