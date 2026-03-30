@@ -218,7 +218,8 @@ For all data, we also include the following per Git repository:
 
   - An overview of the dataset, with links to the most important parts.
   - Instructions on how to reproduce and reuse the data.
-  - The license under which the data is distributed.
+  - A summary of the license under which the data is distributed,
+    mentioning that #link("https://reuse.software/")[REUSE.software] recommendations are followed.
   - A description of how different versions of the data are managed.
 
 - A `CHANGELOG.md` file, following the
@@ -270,6 +271,8 @@ Relevant aspects:
   (More details on data deposits are given below.)
 - The original authors retain the copyrights of the data they generate,
   unless these rights are transferred in an article publication agreement.
+- For clarity, copyrights and licensing conditions are specified for each file in the dataset
+  by adhering to the #link("https://reuse.software/")[REUSE.software] recommendations.
 
 
 == 7. Data Storage and Backup during research
