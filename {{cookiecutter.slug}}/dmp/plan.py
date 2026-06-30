@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: © 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
 # SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-from stepup.core.api import amend, copy, runsh, script, static
+from stepup.core.api import amend, call, copy, run, static
 from stepup.reprep.api import compile_typst
 from yaml import safe_load
 
@@ -23,10 +23,10 @@ else:
     owner = template["github_owner"]
     repository = template["github_repository"]
     url = f"https://raw.githubusercontent.com/{owner}/{repository}/{version}/dmp_template.typ"
-    runsh(f"wget --no-clobber --quiet {url} -O dmp.typ", out="dmp.typ")
+    run(f"wget --no-clobber --quiet {url} -O dmp.typ", out="dmp.typ")
 
 # Write the data of the latest Git commit to a yaml file.
-script("generate.py")
+call("./generate.py", "run", inp="template.yaml", out="generated.yaml")
 
 # Compile the PDF.
 compile_typst("dmp.typ")
