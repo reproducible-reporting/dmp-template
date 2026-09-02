@@ -13,9 +13,7 @@ ${PYTHON3} -m venv venv
 
 # Create an .envrc for direnv.
 cat > .envrc << 'EOL'
-export SOURCE_DATE_EPOCH=315532800
 source ${PWD}/venv/bin/activate
-unset PS1
 EOL
 
 # Activate
