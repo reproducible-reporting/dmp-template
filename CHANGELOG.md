@@ -14,6 +14,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 (no changes yet)
 
+## [2.2] - 2026-09-02
+
+### Changed
+
+- Update to StepUp 4 and Typst 0.15.1.
+- Add `ruff.toml` configuration.
+
 ## [2.1] - 2026-03-30
 
 ### Added
@@ -64,4 +71,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.1]: https://github.com/reproducible-reporting/dmp-template/releases/tag/v1.1
 [2.0]: https://github.com/reproducible-reporting/dmp-template/releases/tag/v2.0
 [2.1]: https://github.com/reproducible-reporting/dmp-template/releases/tag/v2.1
+[2.2]: https://github.com/reproducible-reporting/dmp-template/releases/tag/v2.2
 [unreleased]: https://github.com/reproducible-reporting/dmp-template

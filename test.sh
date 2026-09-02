@@ -54,7 +54,7 @@ local:
 EOF
 
 # Build the DMP
-stepup boot
+sb
 
 # Try a commit
 git commit -a -m "Second commit"

@@ -35,7 +35,7 @@ Author contributions can also be found in the Git history.
 You must have
 [Python](https://www.python.org/) 3,
 [Git](https://git-scm.com/),
-[Typst](https://github.com/typst/typst) 0.13,
+[Typst](https://github.com/typst/typst) 0.15.1,
 [direnv](https://direnv.net/)
 and the [Cookiecutter](https://www.cookiecutter.io/)
 installed on your computer.
@@ -90,7 +90,7 @@ It is assumed that you are familiar with these tools and know how to use them.
 
    ```bash
    cd dmp
-   stepup boot
+   sb
    ```
 
 ## Contributions are welcome
