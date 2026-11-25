@@ -4,7 +4,7 @@
 
 """Generate some fields to be used as input in the template."""
 
-import datetime
+import datetime as dt
 import json
 import subprocess
 from urllib.request import urlopen
@@ -37,8 +37,8 @@ def run(inp, out):
             f"?sha={version}&path=dmp_template.typ&per_page=1"
         )
         info = json.load(urlopen(url))[0]
-        dt = datetime.datetime.fromisoformat(info["commit"]["author"]["date"])
-        generated[f"template_{label}"] = dt.strftime("%d %B %Y")
+        date = dt.datetime.fromisoformat(info["commit"]["author"]["date"])
+        generated[f"template_{label}"] = date.strftime("%d %B %Y")
 
     # Write YAML file.
     with open(out[0], "w") as fh:

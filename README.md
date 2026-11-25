@@ -127,7 +127,7 @@ Existing DMPs do not need to be updated after a patch release.
 
    ```bash
    cookiecutter https://github.com/reproducible-reporting/dmp-template \
-     --checkout v3.0.1 --no-input --overwrite-if-exists \
+     --checkout v3.0.2 --no-input --overwrite-if-exists \
      slug="dmp-project-short" \
      short_name="Prj-Shrt" \
      long_name="The full name of the project" \
@@ -136,7 +136,7 @@ Existing DMPs do not need to be updated after a patch release.
      year="2026"
    ```
 
-   Replace `v3.0.1` by the release you want and the other values by your answers.
+   Replace `v3.0.2` by the release you want and the other values by your answers.
 
 1. Review the changes with `git diff` and restore your own content.
    Cookiecutter overwrites `dmp/fields.yaml` with a copy containing `TODO` placeholders.
@@ -168,7 +168,7 @@ Existing DMPs do not need to be updated after a patch release.
    pre-commit install
    (cd dmp; sb)
    git add -A
-   git commit -m "Update to dmp-template v3.0.1"
+   git commit -m "Update to dmp-template v3.0.2"
    ```
 
 ## Contributions are welcome

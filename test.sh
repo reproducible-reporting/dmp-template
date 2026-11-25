@@ -54,5 +54,8 @@ EOF
 # Build the DMP
 sb
 
+# Run all pre-commit hooks on all files, not only on the files changed below.
+pre-commit run --all-files
+
 # Try a commit
 git commit -a -m "Second commit"

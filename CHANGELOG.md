@@ -14,6 +14,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 (no changes yet)
 
+## [3.0.2] - 2026-11-25
+
+This release only fixes the infrastructure for new DMPs.
+The template (`dmp_template.typ`) and the fields in `fields.yaml` are unchanged since v3.0.1.
+
+### Fixed
+
+- `generate.py` imports `datetime` as `dt`.
+  The ruff version in the pre-commit configuration of v3.0.1 requires this alias,
+  so the `ruff-check` hook failed in DMPs created from or updated to v3.0.1.
+- `test.sh` runs all pre-commit hooks on all files,
+  so such failures are detected before a release.
+
 ## [3.0.1] - 2026-11-25
 
 This release only changes the infrastructure for new DMPs.
@@ -110,4 +123,5 @@ The template (`dmp_template.typ`) and the fields in `fields.yaml` are unchanged 
 [2.1]: https://github.com/reproducible-reporting/dmp-template/releases/tag/v2.1
 [3.0]: https://github.com/reproducible-reporting/dmp-template/releases/tag/v3.0
 [3.0.1]: https://github.com/reproducible-reporting/dmp-template/releases/tag/v3.0.1
+[3.0.2]: https://github.com/reproducible-reporting/dmp-template/releases/tag/v3.0.2
 [unreleased]: https://github.com/reproducible-reporting/dmp-template

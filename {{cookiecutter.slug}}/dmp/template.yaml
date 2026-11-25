@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # The version of the template, between single quotes
-version: v3.0.1
+version: v3.0.2
 # The GitHub repository "owner" and "repository" of the template.
 github_owner: reproducible-reporting
 github_repository: dmp-template
