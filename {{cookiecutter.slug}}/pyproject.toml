@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+
+[project]
+# A fixed name keeps this file identical in all DMPs, which simplifies upgrades.
+name = "dmp"
+# The DMP has no version number, but uv requires this field.
+version = "0.0.0"
+requires-python = ">=3.11"
+dependencies = [
+    "stepup==4.2.0",
+    "stepup-reprep==4.2.0",
+    "pyyaml",
+    "pre-commit",
+]
+
+[tool.uv]
+# This repository is not a Python package, uv only installs the dependencies.
+package = false
+# Allow uv to download Python, even if disabled in a system-wide uv.toml (e.g. on Fedora).
+python-downloads = "automatic"
+# Ignore releases uploaded in the past week, so a release whose files are
+# still being uploaded to PyPI (or that turns out to be broken) is not picked up.
+# StepUp is exempt because its version is pinned above and bumped deliberately.
+exclude-newer = "7 days"
+exclude-newer-package = { stepup = false, stepup-reprep = false }

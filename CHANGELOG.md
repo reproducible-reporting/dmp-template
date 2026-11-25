@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: © 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
+SPDX-FileCopyrightText: 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
 SPDX-License-Identifier: CC-BY-NC-SA-4.0
 -->
 
@@ -13,6 +13,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 (no changes yet)
+
+## [3.0.1] - 2026-11-25
+
+This release only changes the infrastructure for new DMPs.
+The template (`dmp_template.typ`) and the fields in `fields.yaml` are unchanged since v3.0.
+
+### Added
+
+- Instructions in `README.md` for updating an existing DMP with Cookiecutter.
+
+### Changed
+
+- Use [uv](https://docs.astral.sh/uv/) instead of pip to create the software environment:
+  `setup-venv-uv.sh` replaces `setup-venv-pip.sh`
+  and `pyproject.toml` replaces `requirements.txt`.
+  The script installs uv and the latest Python release in `.venv`,
+  so Python no longer needs to be installed beforehand.
+  The `uv.lock` file is not tracked with Git.
+- Update to StepUp 4.2.0 and StepUp RepRep 4.2.0.
+- `plan.py` downloads `dmp_template.typ` with curl instead of wget,
+  so wget is no longer needed.
+  The download is rechecked at every build.
+- The `generate.py` script is also rechecked at every build.
+- The template dates (current and latest) are the dates of the last commits
+  that modified `dmp_template.typ`,
+  and the fields date is the date of the last commit that modified `fields.yaml`.
+  Changes to the infrastructure no longer affect these dates.
+- Remove the redundant `©` character from the SPDX headers.
+- Version numbers may have a third (patch) component,
+  for changes that do not affect the template or the fields.
+
+### Fixed
+
+- `dmp/template.yaml` refers to the current template version.
+  In v2.1 and v3.0, it still referred to v2.0,
+  so DMPs created from these releases use the v2.0 template,
+  unless `version` was changed manually.
 
 ## [3.0] - 2026-09-02
 
@@ -71,4 +108,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.1]: https://github.com/reproducible-reporting/dmp-template/releases/tag/v1.1
 [2.0]: https://github.com/reproducible-reporting/dmp-template/releases/tag/v2.0
 [2.1]: https://github.com/reproducible-reporting/dmp-template/releases/tag/v2.1
+[3.0]: https://github.com/reproducible-reporting/dmp-template/releases/tag/v3.0
+[3.0.1]: https://github.com/reproducible-reporting/dmp-template/releases/tag/v3.0.1
 [unreleased]: https://github.com/reproducible-reporting/dmp-template

@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: © 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
+# SPDX-FileCopyrightText: 2024 RepRep's DMP Template Authors <https://github.com/reproducible-reporting/dmp-template/blob/main/AUTHORS.md>
 # SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 repos:
@@ -19,10 +19,10 @@ repos:
   hooks:
     - id: remove-crlf
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.16.5
+  rev: v0.17.6
   hooks:
     - id: ruff-format
-    - id: ruff
+    - id: ruff-check
       args: ["--fix", "--show-fixes"]
 - repo: https://github.com/hukkin/mdformat
   rev: 1.0.0
@@ -33,6 +33,6 @@ repos:
       - mdformat-ruff
       - mdformat-config
 - repo: https://github.com/fsfe/reuse-tool
-  rev: v6.2.0
+  rev: v6.3.0
   hooks:
   - id: reuse
